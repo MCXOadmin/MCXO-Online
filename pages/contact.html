@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - MCXO Media</title>
     <link rel="stylesheet" href="../styles/contact.css" />
-</head>
-<body>
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <main>
-        <section class="contact-form">
-            <h1>Contact Us</h1>
-            <form action="mailto:info@mcxo.media" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                <input type="submit" value="Send">
-            </form>
-        </section>
+      <section class="contact-form">
+        <h1>Contact</h1>
+        <form action="https://formspree.io/f/xyzgzbrd" method="POST">
+          <label for="business-name">Business Name:</label>
+          <input type="text" id="business-name" name="business-name" />
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" />
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 MCXO Media. All rights reserved.</p>
+      <p>&copy; 2024 MCXO Media. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>

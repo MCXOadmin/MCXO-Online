@@ -9,8 +9,9 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: rgb(16, 15, 63);
+    background-color: rgb(31, 31, 65);
     padding-top: 50px; /* Space for the fixed nav bar */
+    color: white; /* Default text color */
 }
 
 /* Navigation bar styles */
@@ -53,34 +54,27 @@ nav {
     text-decoration: underline; /* Underlines links on hover */
 }
 
-/* Header styles */
-header {
-    min-height: 15rem;
-    background: #10103f;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 5rem 0;
-}
-
-.header-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
 /* Main styles */
 main {
-    padding: 50px 20px;
     display: flex;
     justify-content: center;
+    align-items: center; /* Center content vertically */
+    min-height: calc(100vh - 100px); /* Ensure section takes up full viewport height minus navbar */
 }
 
 .contact-form {
-    background: #10103f;
+    background: rgb(31, 31, 65); /* Same color as body */
     padding: 30px;
     border-radius: 10px;
     color: white;
     max-width: 500px;
     width: 100%;
+    text-align: center; /* Center text and form elements */
+}
+
+.contact-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .contact-form label {
@@ -99,7 +93,7 @@ main {
 }
 
 .contact-form button {
-    background: #10103f;
+    background: rgb(31, 31, 65); /* Same color as form background */
     color: white;
     padding: 10px 20px;
     border: 2px solid white;
@@ -110,7 +104,7 @@ main {
 
 .contact-form button:hover {
     background: white;
-    color: #10103f;
+    color: rgb(31, 31, 65);
 }
 
 /* Footer styles */

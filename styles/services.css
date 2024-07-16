@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: rgb(16, 15, 63);
+    background-color: rgb(31, 31, 65);
     padding-top: 50px; /* Space for the fixed nav bar */
 }
 
@@ -106,7 +106,7 @@ section p {
     flex: 0 0 calc(33.333% - 40px);
     max-width: calc(33.333% - 40px);
     margin: 20px;
-    background-color: rgb(16, 15, 63);
+    background-color: rgb(31, 31, 65);
     padding: 20px;
     text-align: center;
     color: white;
