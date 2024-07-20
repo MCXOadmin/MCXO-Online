@@ -25,10 +25,16 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container */
     padding: 0 20px; /* Padding for responsiveness */
+}
+
+.logo {
+    height: 4rem; /* Adjust size as needed */
+    width: 12rem;
 }
 
 .nav-links {
@@ -52,6 +58,21 @@ nav {
 
 .nav-links a:hover {
     text-decoration: underline;
+}
+
+/* Hamburger button styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
 }
 
 /* Header styles */
@@ -161,4 +182,30 @@ footer {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
 }

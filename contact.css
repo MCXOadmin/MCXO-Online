@@ -26,16 +26,26 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between; /* Space out the logo and nav items */
     max-width: 1200px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container */
     padding: 0 20px; /* Padding for responsiveness */
 }
 
+.logo {
+    height: 4rem; /* Adjust size as needed */
+    width: 12rem;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
 .nav-links {
     list-style: none; /* Removes default list styles */
     display: flex; /* Displays links horizontally */
-    justify-content: center; /* Centers links horizontally */
     padding: 0; /* Removes padding */
     margin: 0; /* Removes margin */
 }
@@ -52,6 +62,22 @@ nav {
 
 .nav-links a:hover {
     text-decoration: underline; /* Underlines links on hover */
+}
+
+/* Hamburger button styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px; /* Space between hamburger and nav links */
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
 }
 
 /* Main styles */
@@ -116,30 +142,29 @@ footer {
     margin-top: 20px;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column; /* Stack nav links vertically */
+        display: none; /* Hide links initially */
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links li {
         margin: 10px 0; /* Adjust margin between list items */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when hamburger menu is clicked */
     }
 
     .contact-form {

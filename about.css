@@ -1,42 +1,55 @@
-/* General reset and body styles */
+/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: rgb(31, 31, 65);
-    padding-top: 50px;
+    padding-top: 50px; /* Space for the fixed nav bar */
 }
 
-/* Responsive Navigation Bar */
+/* Navigation bar styles */
 nav {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 10px 0;
-    position: fixed;
+    position: fixed; /* Fixes the navbar at the top */
     top: 0;
     width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
+    z-index: 1000; /* Ensure it sits on top of other elements */
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: space-between; /* Aligns logo to the left and hamburger button to the right */
+    align-items: center;
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding for responsiveness */
+    position: relative;
+}
+
+.logo {
+    height: 4rem; /* Adjust size as needed */
+    width: 12rem;
+    flex-grow: 1; /* Allows logo to take up available space */
 }
 
 .nav-links {
+    list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Wrap items for small screens */
+}
+
+.nav-links li {
+    margin: 0 20px;
 }
 
 .nav-links a {
@@ -49,7 +62,22 @@ nav {
     text-decoration: underline;
 }
 
-/* Header Styles */
+/* Hamburger button styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Header styles */
 header {
     min-height: 25rem;
     background-image: url('./images/top-view-office-desk-with-growth-chart-laptop-device.jpg');
@@ -58,7 +86,6 @@ header {
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 10rem 30rem;
-    border-color: white;
     position: relative;
 }
 
@@ -89,8 +116,7 @@ header::before {
     font-size: 1.5rem;
 }
 
-
-/* Main Styles */
+/* Main styles */
 main {
     display: flex;
     flex-direction: column;
@@ -104,7 +130,7 @@ section {
     margin-bottom: 50px;
 }
 
-section h1 {
+section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: white;
@@ -144,16 +170,90 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* Align items in a row */
+        justify-content: space-between; /* Ensure logo is on the left and hamburger button is on the right */
+    }
+
+    .logo {
+        flex-grow: 0; /* Prevent logo from expanding on mobile */
+    }
+
+    .hamburger {
+        display: flex;
+        position: relative; /* Adjust if necessary */
     }
 
     .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 10px;
+        width: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute; /* Position absolute to overlay content */
+        top: 60px; /* Adjust as needed */
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    header {
+        padding: 5rem 1rem;
+    }
+
+    header .header-content {
+        max-width: 90%;
     }
 
     header .header-content h1 {
         font-size: 2rem;
+    }
+
+    header .header-content p {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    footer .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    header .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    header .header-content p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
     }
 }
