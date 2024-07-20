@@ -184,11 +184,12 @@ section p {
 }
 
 .red-theme {
-    border-color: red;
+    background: red; /* Background color for red-themed blocks */
+    border: 2px solid black; /* Black border */
 }
 
 .service-content {
-    text-align: left;
+    text-align: center; /* Center text in the service content */
 }
 
 .service-content h2 {
