@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: rgb(31, 31, 65);
-    padding-top: 50px; /* Space for the fixed nav bar */
+    padding-top: 60px; /* Space for the fixed nav bar */
 }
 
 /* Navigation bar styles */
@@ -37,6 +37,7 @@ nav {
     justify-content: center;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Wrap items for small screens */
 }
 
 .nav-links li {
@@ -61,7 +62,7 @@ header {
     background-position: center;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 10rem 30rem;
+    padding: 5rem 1rem; /* Reduced padding for smaller screens */
     border-color: white;
     position: relative;
 }
@@ -78,19 +79,19 @@ header::before {
 }
 
 .header-content {
-    max-width: 600px;
+    max-width: 90%; /* Adjusted for smaller screens */
     margin: 0 auto;
     position: relative; /* Ensure stacking context for z-index */
     z-index: 2; /* Ensure it sits above the overlay */
 }
 
 .header-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Adjusted for smaller screens */
     margin-bottom: 20px;
 }
 
 .header-content p {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Adjusted for smaller screens */
 }
 
 /* Main styles */
@@ -104,14 +105,21 @@ main {
 
 /* Service block styles */
 .service-block {
-    flex: 0 0 calc(50% - 40px);
-    max-width: calc(50% - 40px);
+    flex: 0 0 calc(100% - 40px); /* Full width for smaller screens */
+    max-width: calc(100% - 40px);
     margin: 20px;
     background-color: rgb(16, 15, 63);
     padding: 20px;
     text-align: center;
     color: white;
     border: 2px solid transparent;
+}
+
+@media (min-width: 768px) {
+    .service-block {
+        flex: 0 0 calc(50% - 40px); /* 50% width for medium screens */
+        max-width: calc(50% - 40px);
+    }
 }
 
 .service-content img {
@@ -142,6 +150,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Wrap items for small screens */
 }
 
 .footer-links a {
