@@ -3,87 +3,87 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Body styles */
-  body {
+}
+
+/* Body styles */
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: rgb(31, 31, 65);
     padding-top: 50px; /* Space for the fixed nav bar */
     color: white; /* Default text color */
-  }
-  
-  /* Navigation bar styles */
-  nav {
+}
+
+/* Navigation bar styles */
+nav {
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 10px 0;
     position: fixed; /* Fixes the navbar at the top */
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensure it sits on top of other elements */
-  }
-  
-  .nav-container {
+}
+
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space out the logo and nav items */
     max-width: 1200px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the container */
     padding: 0 20px; /* Padding for responsiveness */
-  }
-  
-  .logo {
+}
+
+.logo {
     height: 4rem; /* Adjust size as needed */
     width: 12rem;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     list-style: none; /* Removes default list styles */
     display: flex; /* Displays links horizontally */
     padding: 0; /* Removes padding */
     margin: 0; /* Removes margin */
-  }
-  
-  .nav-links li {
+}
+
+.nav-links li {
     margin: 0 20px; /* Adjust margin between list items */
-  }
-  
-  .nav-links a {
+}
+
+.nav-links a {
     color: white; /* Link text color */
     text-decoration: none; /* Removes underline */
     font-size: 1.2rem; /* Font size of links */
-  }
-  
-  .nav-links a:hover {
+}
+
+.nav-links a:hover {
     text-decoration: underline; /* Underlines links on hover */
-  }
-  
-  /* Hamburger button styles */
-  .hamburger {
+}
+
+/* Hamburger button styles */
+.hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     margin-left: 20px; /* Space between hamburger and nav links */
-  }
-  
-  .hamburger span {
+}
+
+.hamburger span {
     width: 25px;
     height: 3px;
     background: white;
     margin: 4px 0;
     transition: 0.4s;
-  }
-  
-  /* Main styles */
-  main {
+}
+
+/* Main styles */
+main {
     display: flex;
     justify-content: center;
     align-items: center; /* Center content vertically */
     min-height: calc(100vh - 100px); /* Ensure section takes up full viewport height minus navbar */
-  }
-  
-  .contact-form {
+}
+
+.contact-form {
     background: rgb(31, 31, 65); /* Same color as body */
     padding: 30px;
     border-radius: 10px;
@@ -91,29 +91,29 @@
     max-width: 500px;
     width: 100%;
     text-align: center; /* Center text and form elements */
-  }
-  
-  .contact-form h1 {
+}
+
+.contact-form h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-  }
-  
-  .contact-form label {
+}
+
+.contact-form label {
     display: block;
     font-size: 1.2rem;
     margin-bottom: 10px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
-  }
-  
-  .contact-form button {
+}
+
+.contact-form button {
     background: rgb(31, 31, 65); /* Same color as form background */
     color: white;
     padding: 10px 20px;
@@ -121,62 +121,83 @@
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
-  }
-  
-  .contact-form button:hover {
+}
+
+.contact-form button:hover {
     background: white;
     color: rgb(31, 31, 65);
-  }
-  
-  /* Footer styles */
-  footer {
+}
+
+/* Footer styles */
+footer {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
-  }
-  
-  /* Media Queries for Mobile Devices */
-  @media (max-width: 768px) {
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between links */
+    margin-bottom: 10px; /* Space between links and copyright text */
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
     .nav-links {
-      flex-direction: column; /* Stack nav links vertically */
-      display: none; /* Hide links initially */
-      background: rgba(0, 0, 0, 0.7);
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      text-align: center;
+        flex-direction: column; /* Stack nav links vertically */
+        display: none; /* Hide links initially */
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
     }
-  
+
     .nav-links li {
-      margin: 10px 0; /* Adjust margin between list items */
+        margin: 10px 0; /* Adjust margin between list items */
     }
-  
+
     .hamburger {
-      display: flex;
+        display: flex;
     }
-  
+
     .nav-links.show {
-      display: flex; /* Show links when hamburger menu is clicked */
+        display: flex; /* Show links when hamburger menu is clicked */
     }
-  
+
     .contact-form {
-      padding: 20px;
+        padding: 20px;
     }
-  
+
     .contact-form h1 {
-      font-size: 2rem; /* Reduce font size for h1 */
+        font-size: 2rem; /* Reduce font size for h1 */
     }
-  
+
     .contact-form label {
-      font-size: 1rem; /* Adjust font size for labels */
+        font-size: 1rem; /* Adjust font size for labels */
     }
-  
+
     .contact-form button {
-      font-size: 1rem; /* Adjust font size for button */
-      padding: 10px; /* Adjust padding for button */
+        font-size: 1rem; /* Adjust font size for button */
+        padding: 10px; /* Adjust padding for button */
     }
-  }
-  
+
+    .footer-links {
+        flex-direction: column; /* Stack footer links vertically */
+        gap: 10px; /* Reduce space between links */
+    }
+}
