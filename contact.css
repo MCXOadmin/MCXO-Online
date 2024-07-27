@@ -140,14 +140,13 @@ footer {
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between links */
-    margin-bottom: 10px; /* Space between links and copyright text */
+    gap: 20px;
 }
 
 .footer-links a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem; /* Adjust font size as needed */
+    font-size: 1.2rem;
 }
 
 .footer-links a:hover {
